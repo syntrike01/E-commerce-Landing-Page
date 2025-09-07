@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(229, 80%, 16%); }
-  </style>
+  </style> -->
 </head>
 <body>
 
@@ -49,15 +49,18 @@
        <div class="product-images">
         <!-- Main image -->
          <div class="main-image">
-          <img src="./images/image-product-1.jpg" alt="Main shoe image">
+          <img class="mySlides" src="./images/image-product-1.jpg" alt="Main shoe image">
+          <img class="mySlides" src="./images/image-product-2.jpg" alt="Main shoe image">
+          <img class="mySlides" src="./images/image-product-3.jpg" alt="Main shoe image">
+          <img class="mySlides" src="./images/image-product-4.jpg" alt="Main shoe image">
          </div>
 
          <!-- Thumbnail images -->
          <div class="thumbnail-images">
-            <img src="./images/image-product-1-thumbnail.jpg" alt="shoe 1">
-            <img src="./images/image-product-2-thumbnail.jpg" alt="shoe 2">
-            <img src="./images/image-product-3-thumbnail.jpg" alt="shoe 3">
-            <img src="./images/image-product-4-thumbnail.jpg" alt="shoe 4">
+            <img class="thumbnail" src="./images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="shoe 1">
+            <img class="thumbnail" src="./images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" alt="shoe 2">
+            <img class="thumbnail" src="./images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" alt="shoe 3">
+            <img class="thumbnail" src="./images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" alt="shoe 4">
          </div>
 
        </div>
@@ -89,5 +92,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="./script.js" ></script>
 </body>
 </html>

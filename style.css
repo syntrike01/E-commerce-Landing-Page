@@ -1,19 +1,25 @@
 @layer fonts {
+
   /* kumbh-sans-regular - latin */
   @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: "Kumbh Sans";
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/kumbh-sans-v26-latin/kumbh-sans-v26-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("fonts/kumbh-sans-v26-latin/kumbh-sans-v26-latin-regular.woff2") format("woff2");
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
   /* kumbh-sans-700 - latin */
   @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: "Kumbh Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("fonts/kumbh-sans-v26-latin/kumbh-sans-v26-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("fonts/kumbh-sans-v26-latin/kumbh-sans-v26-latin-700.woff2") format("woff2");
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
   :root {
@@ -28,16 +34,16 @@
   h1 {
     font-size: var(--fs-28);
 
-    @media (width >= calc(700 / 16 * 1rem)) {
-        font-size: var(--fs-44);
+    @media (width >=calc(700 / 16 * 1rem)) {
+      font-size: var(--fs-44);
     }
   }
 
   body {
     font-size: var(--fs-15);
 
-    @media (width >= calc(700 / 16 * 1rem)) {
-        font-size: var(--fs-16);
+    @media (width >=calc(700 / 16 * 1rem)) {
+      font-size: var(--fs-16);
     }
   }
 
@@ -45,9 +51,9 @@
     font-size: var(--fs-12);
     letter-spacing: 1.85px;
 
-    @media (width >= calc(700 / 16 * 1rem)){
-        font-size: var(--fs-13);
-        letter-spacing: 2px;
+    @media (width >=calc(700 / 16 * 1rem)) {
+      font-size: var(--fs-13);
+      letter-spacing: 2px;
     }
   }
 
@@ -77,6 +83,7 @@
 }
 
 @layer global {
+
   *,
   *::before,
   *::after {
@@ -85,10 +92,11 @@
 
   body {
     margin: 0;
-    min-height: 50vh;
+    /* min-height: 50vh; */
     /* temporary */
     font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
     font-weight: 400;
+
   }
 
   img {
@@ -98,7 +106,8 @@
 
   h1,
   h2,
-  h3, h4 {
+  h3,
+  h4 {
     font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
     margin: 0;
     line-height: 1.1;
@@ -123,72 +132,109 @@
   }
 }
 
+@layer layout {
+
+  .wrapper {
+    max-width: calc(1110 / 16 * 1rem);
+    margin: 0 auto;
+  }
+
+  .sneaker_logo{
+    @media (width >=calc(1440 / 16 * 1rem)) {
+      order: -1;
+    }
+  }
+
+  .wrapper_header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .header-icons {
+
+    display: flex;
+    align-items: center;
+
+    .cart_logo {
+      padding-right: 1.5rem;
+    }
+
+    .profile_img {
+      height: clamp(1.5rem, .9718rem + 2.2535vw, 3rem);
+    width: clamp(1.5rem, .9718rem + 2.2535vw, 3rem);
+    }
+  }
+}
+
 @layer topnav {
   .topnav {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding-block: 0.5rem;
-}
-
-.topnav button {
-  background: none;
-  border: none;
-  padding: 0;
-
-  @media (width >= calc(700 / 16 * 1rem)) {
-    display: none;
-  }
-}
-
-.topnav__open[aria-expanded='true'] + .topnav__menu {
-  translate: 0;
-
-  @media (prefers-reduced-motion) {
-    opacity: 1;
-  }
-}
-
-.topnav__close {
-  display: block;
-  margin-inline-start: auto;
-  margin-block-end: 8rem;
-
-  img {
-    width: 2.5rem;
-  }
-}
-
-.topnav__menu {
-  @media (width < calc(700 / 16 * 1rem)) {
-    position: fixed;
-    inset: 0;
-    padding: 1.5rem;
-    background-color: hsl(256, 100%, 33%);
-    translate: 100vw 0;
-    transition: translate 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* padding-block: 0.5rem; */
   }
 
-  @media (width < calc(700 / 16 * 1rem)) and (prefers-reduced-motion) {
+  .topnav button {
+    background: none;
+    border: none;
+    padding: 0;
+
+    @media (width >=calc(1440 / 16 * 1rem)) {
+      display: none;
+    }
+  }
+
+  .topnav__open[aria-expanded='true']+.topnav__menu {
     translate: 0;
-    opacity: 0;
-    transition: opacity 500ms ease-in-out;
+
+    @media (prefers-reduced-motion) {
+      opacity: 1;
+    }
   }
-}
 
-.topnav__links {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+  .topnav__close {
+    display: block;
+    margin-inline-start: auto;
+    margin-block-end: 8rem;
 
-  @media (width < calc(700 / 16 * 1rem)) {
-    flex-direction: column;
+    img {
+      width: 2.5rem;
+    }
   }
-}
 
-.topnav__item {
-  list-style-type: none;
-}
+  .topnav__menu {
+    @media (width < calc(1440 / 16 * 1rem)) {
+      position: fixed;
+      inset: 0;
+      padding: 1.5rem;
+      background-color: hsl(256, 100%, 33%);
+      translate: 100vw 0;
+      transition: translate 0.5s ease-in-out;
+    }
+
+    @media (width < calc(1440 / 16 * 1rem)) and (prefers-reduced-motion) {
+      translate: 0;
+      opacity: 0;
+      transition: opacity 500ms ease-in-out;
+    }
+  }
+
+  .topnav__links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    @media (width < calc(1440 / 16 * 1rem)) {
+      flex-direction: column;
+    }
+  }
+
+  .topnav__item {
+    list-style-type: none;
+  }
 }

@@ -13,71 +13,60 @@
   <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
   <script src="script.js" async></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(229, 80%, 16%); }
-  </style> -->
 </head>
 
 <body>
 
-  <header class="topnav">
-    <img src="./images/logo.svg" alt="Sneaker Home" width="138" height="20">
+  <header class="wrapper topnav">
+    <section class="wrapper_header">
+      
 
-    <nav>
-      <span id="nav-label" hidden>Navigation</span>
-      <button id="btnOpen" class="topnav__open" aria-expanded="false" aria-labelledby="nav-label">
-        <img src="/images/icon-menu.svg" alt="" width="16" height="15" />
-      </button>
-      <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
-        <button class="topnav__close" id="btnClose" aria-label="Close">
-          <img src="/images/icon-close.svg" alt="" width="14" height="15" />
+      <nav>
+        <span id="nav-label" hidden>Navigation</span>
+        <button id="btnOpen" class="topnav__open" aria-expanded="false" aria-labelledby="nav-label">
+          <img src="/images/icon-menu.svg" alt="" width="16" height="15" />
         </button>
-        <ul class="topnav__links">
-          <li class="topnav__item">
-            <a href="" class="topnav__link">Collections</a>
-          </li>
-          <li class="topnav__item">
-            <a href="" class="topnav__link">Men</a>
-          </li>
-          <li class="topnav__item">
-            <a href="" class="topnav__link">Women</a>
-          </li>
-          <li class="topnav__item">
-            <a href="" class="topnav__link">About</a>
-          </li>
-          <li class="topnav__item">
-            <a href="" class="topnav__link">Contact</a>
-          </li>
-        </ul>
+        <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
+          <button class="topnav__close" id="btnClose" aria-label="Close">
+            <img src="/images/icon-close.svg" alt="" width="14" height="15" />
+          </button>
+          <ul class="topnav__links">
+            <li class="topnav__item">
+              <a href="" class="topnav__link">Collections</a>
+            </li>
+            <li class="topnav__item">
+              <a href="" class="topnav__link">Men</a>
+            </li>
+            <li class="topnav__item">
+              <a href="" class="topnav__link">Women</a>
+            </li>
+            <li class="topnav__item">
+              <a href="" class="topnav__link">About</a>
+            </li>
+            <li class="topnav__item">
+              <a href="" class="topnav__link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <img class="sneaker_logo" src="./images/logo.svg" alt="Sneaker Home" width="138" height="20">
+
+      <div class="header-icons">
+        <a href="" class="cart">
+          <img class="cart_logo" src="./images/icon-cart.svg" alt="Cart">
+        </a>
+
+        <a href="" class="profile">
+          <img class="profile_img" src="./images/image-avatar.png" alt="user profile">
+        </a>
       </div>
-    </nav>
-
-    <nav>
-      <ul>
-        <li><a href="">Collections</a></li>
-        <li><a href="">Men</a></li>
-        <li><a href="">Women</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-icons">
-      <a href="" class="cart">
-        <img src="./images/icon-cart.svg" alt="Cart">
-      </a>
-
-      <a href="" class="profile">
-        <img src="./images/image-avatar.png" alt="user profile">
-      </a>
-    </div>
+    </section>
 
   </header>
 
   <main>
-    <section class="product">
+    <section class="wrapper product">
       <!-- LEFT : product images  -->
       <div class="product-images">
         <!-- Main image -->
@@ -126,7 +115,7 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 
-  <script src="./script.js"></script>
+  <!-- <script src="./script.js"></script> -->
 </body>
 
 </html>
